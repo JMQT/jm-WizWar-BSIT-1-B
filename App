@@ -1,0 +1,43 @@
+public class App {
+    public static void main(String[] args) throws Exception {
+        System.out.println("Wizards and Warlocks");
+
+        Wizard Harry = new Wizard("Harry");
+        Warlock Scarlette = new Warlock("Scarlette");
+        Character ch = new Character();
+
+        System.out.println("Wizard");
+        ch.intialCh("Harry");
+
+        System.out.println("\nWarlock");
+        ch.intialCh("Scarlette");
+
+        System.out.println("\n");
+        Harry.executionerRay(Scarlette);
+        Scarlette.status(60, 200);
+        Harry.status(100, 160);
+
+        Scarlette.scriptFlare(Harry);
+        Scarlette.status(60, 165);
+        Harry.status(65, 160);
+        Scarlette.restore(Scarlette, 20, 20);
+        Scarlette.status(80, 185);
+        Harry.status(65, 160);
+
+        Harry.acidRain(Scarlette);
+        Scarlette.status(30, 185);
+        Harry.status(65, 110);
+        Scarlette.thunderFlash(Harry);
+        Scarlette.status(30, 135);
+        Harry.status(15, 110);
+        Harry.executionerRay(Scarlette);
+        Scarlette.status(0, 135);
+        Harry.status(15, 70);
+
+        System.out.println("The winner is Wizard Harry");
+        System.out.println("Wizard Harry will level up!!");
+        System.out.println("Level 1 to Level =  "+ch.levelUp(1));
+
+
+    }
+}
